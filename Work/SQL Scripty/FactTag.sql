@@ -1,0 +1,20 @@
+USE [AW_DWH_xprchlik]
+GO
+
+/****** Object:  Table [dbo].[factTag]    Script Date: 15.01.2023 18:52:14 ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE TABLE [dbo].[factTag](
+	[VideoKey] [int] NOT NULL,
+	[TagKey] [int] NOT NULL,
+ CONSTRAINT [pk_tagKey_videoKey] PRIMARY KEY CLUSTERED 
+(
+	[TagKey] ASC,
+	[VideoKey] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+GO

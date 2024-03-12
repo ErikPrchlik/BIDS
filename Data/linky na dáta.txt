@@ -1,0 +1,8 @@
+YouTube Trending Video Dataset (updated daily)
+Zdroj dat: https://www.kaggle.com/datasets/rsrishav/youtube-trending-video-dataset?select=GB_youtube_trending_data.csv
+
+YouTube's Channels Dataset
+Zdroj dat: https://www.kaggle.com/datasets/harshithgupta/youtubes-channels-dataset
+
+Top 1000 Youtubers (Cleaned) World
+Zdroj dat: https://www.kaggle.com/datasets/syedjaferk/top-1000-youtubers-cleaned

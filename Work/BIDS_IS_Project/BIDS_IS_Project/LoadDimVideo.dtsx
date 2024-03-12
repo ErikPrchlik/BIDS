@@ -1,0 +1,1345 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="1/10/2023 10:16:08 AM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="SKLAD805"
+  DTS:CreatorName="AD\xprchlik"
+  DTS:DTSID="{CF88F5B1-DBE1-4BE1-874C-25757D06A270}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="15.0.2000.170"
+  DTS:LocaleID="1029"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="45"
+  DTS:VersionGUID="{4D8C268C-193E-48CB-84BE-EC6D76192C4B}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{C1C7D637-319E-4F7D-B3B2-581F05DE4F8E}"
+      DTS:ObjectName="Flat File Connection Manager">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1029"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:ColumnNamesInFirstDataRow="True"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="Z:\N-2r-2s\BIDS\Project Data\YouTube Trending Video Dataset\BRex.csv">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="video_id"
+              DTS:DTSID="{4320BF6D-1C5A-4966-BED0-8516DC4B50AA}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="title"
+              DTS:DTSID="{1AEF8674-BB18-42EC-A750-849E7D7FD978}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="publishedAt"
+              DTS:DTSID="{54A20F98-B70D-4F1E-8477-95A83A16E2F8}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="200"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="channelId"
+              DTS:DTSID="{E355BB44-4AA3-42D0-9E90-91BDAEEB3755}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="500"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="channelTitle"
+              DTS:DTSID="{F6EABB3F-EE05-4111-82B6-EA458F80014C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="16"
+              DTS:TextQualified="True"
+              DTS:ObjectName="categoryId"
+              DTS:DTSID="{6A623491-E47B-4A5D-AE39-3A3A7121741D}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="50"
+              DTS:DataType="129"
+              DTS:TextQualified="True"
+              DTS:ObjectName="trending_date"
+              DTS:DTSID="{CE91A6C3-A9F2-4AB5-987D-02EC450EA283}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="view_count"
+              DTS:DTSID="{1DB6A851-C918-4CD7-8E43-470B7DE68AE0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="likes"
+              DTS:DTSID="{B5C837CB-E3B5-466D-925F-4BE35217CE8B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="dislikes"
+              DTS:DTSID="{FF530BD1-C9DB-4C5D-B6E0-3B3B4C665709}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="comment_count"
+              DTS:DTSID="{63C1B3D9-6B0B-4F2C-96CC-E7FEFB3B741C}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:MaximumWidth="100"
+              DTS:DataType="130"
+              DTS:TextQualified="True"
+              DTS:ObjectName="thumbnail_link"
+              DTS:DTSID="{B3E645FF-20FB-4F39-9715-20F960CAEC1B}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x003B_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="comments_disabled"
+              DTS:DTSID="{3BFE685F-5B0F-4649-80E6-3B971FD9BD96}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="11"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ratings_disabled"
+              DTS:DTSID="{1E2E4F43-F881-47AB-9466-8C2909237411}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+      DTS:CreationName="FLATFILE"
+      DTS:DTSID="{760955B2-008F-412D-9498-C5C0E903E04A}"
+      DTS:ObjectName="Flat File Connection Manager 1">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:Format="Delimited"
+          DTS:LocaleID="1029"
+          DTS:HeaderRowDelimiter="_x000D__x000A_"
+          DTS:RowDelimiter=""
+          DTS:TextQualifier="_x003C_none_x003E_"
+          DTS:CodePage="1250"
+          DTS:ConnectionString="Z:\N-2r-2s\BIDS\Project Data\YouTube Trending Video Dataset\log.txt">
+          <DTS:FlatFileColumns>
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="302"
+              DTS:TextQualified="True"
+              DTS:ObjectName="Flat File Source Error Output Column"
+              DTS:DTSID="{3480F368-1E33-473C-AE4E-34F13E815117}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x002C_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorCode"
+              DTS:DTSID="{1B13E82F-404D-47D6-90BF-E65768DF10E0}"
+              DTS:CreationName="" />
+            <DTS:FlatFileColumn
+              DTS:ColumnType="Delimited"
+              DTS:ColumnDelimiter="_x000D__x000A_"
+              DTS:DataType="3"
+              DTS:TextQualified="True"
+              DTS:ObjectName="ErrorColumn"
+              DTS:DTSID="{1CBD4C51-0328-431A-8596-A5D1FAB54E7C}"
+              DTS:CreationName="" />
+          </DTS:FlatFileColumns>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Data Flow Task LoadDimVideo"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Data Flow Task"
+      DTS:DTSID="{9F1C0A17-1911-4340-A44A-367624B752AC}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Data Flow Task LoadDimVideo"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video"
+              componentClassID="Microsoft.FlatFileSource"
+              contactInfo="Flat File Source;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Source"
+              localeId="1029"
+              name="CSV File Source Distinct Video"
+              usesDispositions="true"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether zero-length columns are treated as null."
+                  name="RetainNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of an output column containing the file name. If no name is specified, no output column containing the file name will be generated."
+                  name="FileNameColumnName"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager]"
+                  name="FlatFileConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output]"
+                  name="Flat File Source Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[video_id]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[video_id]"
+                      length="50"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[video_id]"
+                      name="video_id"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[channelId]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[channelId]"
+                      length="200"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[channelId]"
+                      name="channelId"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[channelTitle]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[channelTitle]"
+                      length="500"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[channelTitle]"
+                      name="channelTitle"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[categoryId]"
+                      dataType="i1"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[categoryId]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[categoryId]"
+                      name="categoryId"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[trending_date]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[trending_date]"
+                      length="50"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[trending_date]"
+                      name="trending_date"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[view_count]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[view_count]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[view_count]"
+                      name="view_count"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[likes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[likes]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[likes]"
+                      name="likes"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[dislikes]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[dislikes]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[dislikes]"
+                      name="dislikes"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[comment_count]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[comment_count]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[comment_count]"
+                      name="comment_count"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[thumbnail_link]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[thumbnail_link]"
+                      length="100"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[thumbnail_link]"
+                      name="thumbnail_link"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[comments_disabled]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[comments_disabled]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[comments_disabled]"
+                      name="comments_disabled"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[ratings_disabled]"
+                      dataType="bool"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[ratings_disabled]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[ratings_disabled]"
+                      name="ratings_disabled"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[title]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[title]"
+                      length="200"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[title]"
+                      name="title"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]"
+                      codePage="1250"
+                      dataType="str"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="RedirectRow"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[publishedAt]"
+                      length="50"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]"
+                      name="publishedAt"
+                      truncationRowDisposition="RedirectRow">
+                      <properties>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the column uses the faster, locale-neutral parsing routines."
+                          name="FastParse">false</property>
+                        <property
+                          dataType="System.Boolean"
+                          description="Indicates whether the data is in binary format."
+                          name="UseBinaryFormat">false</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[video_id]"
+                      dataType="wstr"
+                      length="50"
+                      name="video_id" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[channelId]"
+                      dataType="wstr"
+                      length="200"
+                      name="channelId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[channelTitle]"
+                      dataType="wstr"
+                      length="500"
+                      name="channelTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[categoryId]"
+                      dataType="i1"
+                      name="categoryId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[trending_date]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="trending_date" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[view_count]"
+                      dataType="i4"
+                      name="view_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[likes]"
+                      dataType="i4"
+                      name="likes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[dislikes]"
+                      dataType="i4"
+                      name="dislikes" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[comment_count]"
+                      dataType="i4"
+                      name="comment_count" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[thumbnail_link]"
+                      dataType="wstr"
+                      length="100"
+                      name="thumbnail_link" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[comments_disabled]"
+                      dataType="bool"
+                      name="comments_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[ratings_disabled]"
+                      dataType="bool"
+                      name="ratings_disabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[title]"
+                      dataType="wstr"
+                      length="200"
+                      name="title" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].ExternalColumns[publishedAt]"
+                      codePage="1250"
+                      dataType="str"
+                      length="50"
+                      name="publishedAt" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output]"
+                  isErrorOut="true"
+                  name="Flat File Source Error Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      description="Flat File Source Error Output Column"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]"
+                      name="Flat File Source Error Output Column" />
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit"
+              componentClassID="Microsoft.DerivedColumn"
+              contactInfo="Derived Column;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;0"
+              description="Creates new column values by applying expressions to transformation input columns. Create new columns or overwrite existing ones. For example, concatenate the values from the 'first name' and 'last name' column to make a 'full name' column."
+              name="Derived Column Date Edit"
+              usesDispositions="true">
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Inputs[Derived Column Input]"
+                  description="Input to the Derived Column Transformation"
+                  name="Derived Column Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Inputs[Derived Column Input].Columns[publishedAt]"
+                      cachedCodepage="1250"
+                      cachedDataType="str"
+                      cachedLength="50"
+                      cachedName="publishedAt"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]" />
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output]"
+                  description="Default Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  name="Derived Column Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output].Columns[PublishedDate]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Computation"
+                      errorRowDisposition="FailComponent"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output].Columns[PublishedDate]"
+                      name="PublishedDate"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Expression"
+                          name="Expression">(DT_DBDATE)([SUBSTRING]([TOKEN](#{Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]},".",3),1,4) + "-" + [RIGHT]("0" + [TOKEN](#{Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]},".",2),2) + "-" + [RIGHT]("0" + [TOKEN](#{Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[publishedAt]},".",1),2))</property>
+                        <property
+                          containsID="true"
+                          dataType="System.String"
+                          description="Derived Column Friendly Expression"
+                          expressionType="Notify"
+                          name="FriendlyExpression">(DT_DBDATE)(SUBSTRING(TOKEN(publishedAt,".",3),1,4) + "-" + RIGHT("0" + TOKEN(publishedAt,".",2),2) + "-" + RIGHT("0" + TOKEN(publishedAt,".",1),2))</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Error Output]"
+                  description="Error Output of the Derived Column Transformation"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Derived Column Error Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Inputs[Derived Column Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination"
+              componentClassID="Microsoft.FlatFileDestination"
+              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Flat File Destination"
+              localeId="1029"
+              name="Log Flat File Destination"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Specifies whether the data will overwrite or append to the destination file."
+                  name="Overwrite">true</property>
+                <property
+                  dataType="System.Null"
+                  description="Specifies the text to write to the destination file before any data is written."
+                  expressionType="Notify"
+                  name="Header" />
+                <property
+                  dataType="System.Boolean"
+                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
+                  name="EscapeQualifier">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Connections[FlatFileConnection]"
+                  connectionManagerID="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  connectionManagerRefId="Package.ConnectionManagers[Flat File Connection Manager 1]"
+                  name="FlatFileConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input]"
+                  hasSideEffects="true"
+                  name="Flat File Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].Columns[Flat File Source Error Output Column]"
+                      cachedCodepage="1250"
+                      cachedDataType="text"
+                      cachedName="Flat File Source Error Output Column"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[Flat File Source Error Output Column]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorCode]"
+                      cachedDataType="i4"
+                      cachedName="ErrorCode"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorCode]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].Columns[ErrorColumn]"
+                      cachedDataType="i4"
+                      cachedName="ErrorColumn"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output].Columns[ErrorColumn]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[Flat File Source Error Output Column]"
+                      codePage="1250"
+                      dataType="text"
+                      name="Flat File Source Error Output Column" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorCode]"
+                      dataType="i4"
+                      name="ErrorCode" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[ErrorColumn]"
+                      dataType="i4"
+                      name="ErrorColumn" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup DimVDate"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from [dbo].[dimVDate]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select * from (select * from [dbo].[dimVDate]) [refTable]
+where [refTable].[FullDateAlternateKey] = ?</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="DateKey" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FullDateAlternateKey" dataType="DT_DBDATE" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfWeek" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishDayNameOfWeek" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfMonth" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="DayNumberOfYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="WeekNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="EnglishMonthName" dataType="DT_WSTR" length="10" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="MonthNumberOfYear" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="CalendarSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalQuarter" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalYear" dataType="DT_I2" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="FiscalSemester" dataType="DT_UI1" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output].Columns[PublishedDate]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Connections[OleDbConnection]"
+                  connectionManagerID="{DF9D63A7-366E-483A-886A-A8FB3AB75AE5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[treeman.AW_DWH_xprchlik]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input].Columns[PublishedDate]"
+                      cachedDataType="dbDate"
+                      cachedName="PublishedDate"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output].Columns[PublishedDate]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">FullDateAlternateKey</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Match Output].Columns[DateKey]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Match Output].Columns[DateKey]"
+                      name="DateKey"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">DateKey</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="OLE DB Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;4"
+              description="OLE DB Destination"
+              name="OLE DB Destination"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="The number of seconds before a command times out.  A value of 0 indicates an infinite time-out."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the name of the database object used to open a rowset."
+                  name="OpenRowset">[dbo].[dimVideo]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies the variable that contains the name of the database object used to open a rowset."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="The SQL command to be executed."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1250</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Forces the use of the DefaultCodePage property value when describing character data."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the mode used to access the database."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the values supplied for identity columns will be copied to the destination. If false, values for identity columns will be auto-generated at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the columns containing null will have null inserted in the destination. If false, columns containing null will have their default values inserted at the destination. Applies only if fast load is turned on."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies options to be used with fast load.  Applies only if fast load is turned on."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies when commits are issued during data insertion.  A value of 0 specifies that one commit will be issued at the end of data insertion.  Applies only if fast load is turned on."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Connections[OleDbConnection]"
+                  connectionManagerID="{DF9D63A7-366E-483A-886A-A8FB3AB75AE5}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[treeman.AW_DWH_xprchlik]"
+                  description="The OLE DB runtime connection used to access the database."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+                  errorOrTruncationOperation="Insert"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="OLE DB Destination Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[video_id]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="video_id"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VideoId]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[video_id]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[title]"
+                      cachedDataType="wstr"
+                      cachedLength="200"
+                      cachedName="title"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VideoTitle]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[title]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[DateKey]"
+                      cachedDataType="i4"
+                      cachedName="DateKey"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PublishedAtDateKey]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Match Output].Columns[DateKey]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[thumbnail_link]"
+                      cachedDataType="wstr"
+                      cachedLength="100"
+                      cachedName="thumbnail_link"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ThumbnailLink]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[thumbnail_link]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[comments_disabled]"
+                      cachedDataType="bool"
+                      cachedName="comments_disabled"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CommentsDisabled]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[comments_disabled]" />
+                    <inputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].Columns[ratings_disabled]"
+                      cachedDataType="bool"
+                      cachedName="ratings_disabled"
+                      externalMetadataColumnId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RatingDisabled]"
+                      lineageId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output].Columns[ratings_disabled]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VideoKey]"
+                      dataType="i4"
+                      name="VideoKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VideoId]"
+                      dataType="wstr"
+                      length="50"
+                      name="VideoId" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[VideoTitle]"
+                      dataType="wstr"
+                      length="200"
+                      name="VideoTitle" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[PublishedAtDateKey]"
+                      dataType="i4"
+                      name="PublishedAtDateKey" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[ThumbnailLink]"
+                      dataType="wstr"
+                      length="100"
+                      name="ThumbnailLink" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[CommentsDisabled]"
+                      dataType="bool"
+                      name="CommentsDisabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[RatingDisabled]"
+                      dataType="bool"
+                      name="RatingDisabled" />
+                    <externalMetadataColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input].ExternalColumns[Description]"
+                      dataType="wstr"
+                      length="1000"
+                      name="Description" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Outputs[OLE DB Destination Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="OLE DB Destination Error Output"
+                  synchronousInputId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Outputs[OLE DB Destination Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Data Flow Task LoadDimVideo.Paths[Derived Column Output]"
+              endId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Inputs[Lookup Input]"
+              name="Derived Column Output"
+              startId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Outputs[Derived Column Output]" />
+            <path
+              refId="Package\Data Flow Task LoadDimVideo.Paths[Flat File Source Error Output]"
+              endId="Package\Data Flow Task LoadDimVideo\Log Flat File Destination.Inputs[Flat File Destination Input]"
+              name="Flat File Source Error Output"
+              startId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Error Output]" />
+            <path
+              refId="Package\Data Flow Task LoadDimVideo.Paths[Flat File Source Output]"
+              endId="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit.Inputs[Derived Column Input]"
+              name="Flat File Source Output"
+              startId="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video.Outputs[Flat File Source Output]" />
+            <path
+              refId="Package\Data Flow Task LoadDimVideo.Paths[Lookup Match Output]"
+              endId="Package\Data Flow Task LoadDimVideo\OLE DB Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup Match Output"
+              startId="Package\Data Flow Task LoadDimVideo\Lookup DimVDate.Outputs[Lookup Match Output]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph">
+        <NodeLayout
+          Size="222,42"
+          Id="Package\Data Flow Task LoadDimVideo"
+          TopLeft="5.5,5.5" />
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Data Flow Task LoadDimVideo">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        <NodeLayout
+          Size="171,42"
+          Id="Package\Data Flow Task LoadDimVideo\OLE DB Destination"
+          TopLeft="66.125,285.375" />
+        <NodeLayout
+          Size="192,42"
+          Id="Package\Data Flow Task LoadDimVideo\Log Flat File Destination"
+          TopLeft="292.5,104.625" />
+        <NodeLayout
+          Size="220,42"
+          Id="Package\Data Flow Task LoadDimVideo\CSV File Source Distinct Video"
+          TopLeft="33.5,25.875" />
+        <NodeLayout
+          Size="163.5,42"
+          Id="Package\Data Flow Task LoadDimVideo\Lookup DimVDate"
+          TopLeft="64,188.875" />
+        <NodeLayout
+          Size="200.5,42"
+          Id="Package\Data Flow Task LoadDimVideo\Derived Column Date Edit"
+          TopLeft="43.125,106.125" />
+        <EdgeLayout
+          Id="Package\Data Flow Task LoadDimVideo.Paths[Flat File Source Error Output]"
+          TopLeft="178.833333333333,67.875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="209.666666666667,36.75"
+              Start="0,0"
+              End="209.666666666667,29.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,10.8592057761733" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,10.8592057761733"
+                    Point2="0,14.8592057761733"
+                    Point3="4,14.8592057761733" />
+                  <mssgle:LineSegment
+                    End="205.666666666667,14.8592057761733" />
+                  <mssgle:CubicBezierSegment
+                    Point1="205.666666666667,14.8592057761733"
+                    Point2="209.666666666667,14.8592057761733"
+                    Point3="209.666666666667,18.8592057761733" />
+                  <mssgle:LineSegment
+                    End="209.666666666667,29.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="41.2069466145834,19.8592057761733,127.2527734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task LoadDimVideo.Paths[Derived Column Output]"
+          TopLeft="144.5625,148.125">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.75"
+              Start="0,0"
+              End="0,33.25">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.25" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task LoadDimVideo.Paths[Lookup Match Output]"
+          TopLeft="148.6875,230.875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,54.5"
+              Start="0,0"
+              End="0,47">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,47" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,17.6953125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\Data Flow Task LoadDimVideo.Paths[Flat File Source Output]"
+          TopLeft="143.4375,67.875">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,38.25"
+              Start="0,0"
+              End="0,30.75">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,30.75" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task LoadDimVideo\OLE DB Destination">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Data Flow Task LoadDimVideo\Lookup DimVDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[dimVDate]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
