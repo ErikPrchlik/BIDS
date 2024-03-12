@@ -1,2 +1,2 @@
 # BIDS
-University project aimed on business inteligence and data warhouse.
+University project focused on business intelligence and data warehouse.
